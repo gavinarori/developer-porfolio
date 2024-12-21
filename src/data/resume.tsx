@@ -3,32 +3,39 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Gavin Arori",
-  initials: "PN",
-  url: "https://github.com/StarKnightt/prasendev",
-  location: "Odisha, India",
-  locationLink: "https://www.google.com/maps/place/odisha",
+  initials: "GA",
+  url: "https://github.com/arorigavin",
+  location: "Kenya",
+  locationLink: "https://www.google.com/maps/place/Kenya",
   description:
-    "I'm a developer from India who enjoys creating and building things that help people. I'm also quite active on Twitter!",
+    "I'm a developer from Kenya passionate about building innovative and user-friendly applications. I enjoy learning new technologies and collaborating on impactful projects.",
   summary:
-    "I Completed my B.tech Degree in [Computer Science and Information Technology](https://tat.ac.in/) at the end of 2024. Right Now, I'm learning Next.js and working on some [projects](https://github.com/StarKnightt) to sharpen my skills. I love contribute in Open-Source projects",
-  avatarUrl: "/me.png",
+    "I graduated with a Bachelor of Business Information Technology from Dedan Kimathi University of Technology in 2024. Currently, I'm focused on enhancing my skills in modern frameworks like Next.js and building practical projects.",
+  avatarUrl: "/Gavin.jpg",
   skills: [
+    "JavaScript",
+    "TypeScript",
     "React",
     "Next.js",
-    "Typescript",
+    "SpringBoot",
+    "TailwindCSS",
+    "Astro",
+    "Vite",
     "Node.js",
-    "Java",
     "MongoDB",
-    "JavaScript",
-    "git",
-    "Linux",
+    "PostgreSQL",
+    "MySQL",
+    "HTML",
+    "CSS",
+    "Redux Toolkit",
+    "Git",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "prasenjitt4e@gmail.com",
+    email: "arorigavin@gmail.com",
     tel: "+91 6294925956",
     social: {
       GitHub: {
@@ -58,12 +65,6 @@ export const DATA = {
         icon: Icons.youtube,
         navbar: true,
       },
-      CodePen: {
-        name: "CodePen",
-        url: "https://codepen.io/StarKnightt",
-        icon: Icons.codepen,
-        navbar: true,
-      },
       buyMeACoffee: {
         name: "buyMeACoffee",
         url: "https://buymeacoffee.com/prasen",
@@ -81,94 +82,43 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "Gigitise",
+      href: "",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
+      title: "Software Developer",
       logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
-      description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+      start: "January 2024",
+      end: "April 2024",
+      description:[
+        "Developed and maintained the frontend for the Freelancer product, enhancing user experience and interface responsiveness.",
+        "Contributed to the Client and Landing Page products, ensuring high performance and consistency.",
+        "Implemented performance optimization techniques, improving page load times by 20%.",
+        "Collaborated with backend developers to integrate RESTful APIs, enhancing application functionality."
+      ]
+        
     },
     {
-      company: "Shopify",
+      company: "Adamur",
       badges: [],
-      href: "https://shopify.com",
+      href: "",
       location: "Remote",
-      title: "Software Engineer",
+      title: "Delegate Developer",
       logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
+      start: "September 2024",
+      end: "Present",
       description:
         "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
-    },
-    {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
-      badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
-      description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    },
-    {
-      company: "Splunk",
-      href: "https://splunk.com",
-      badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
-      description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
     },
   ],
   education: [
     {
-      school: "Trident Academy Of Technology",
-      href: "https://tat.ac.in/",
-      degree: "B.Tech in Computer Science and Information Technology",
+      school: "Dedan Kimathi University of Technology",
+      href: "",
+      degree: "Bachelor in science ",
       logoUrl: "/buildspace.jpg",
       start: "2020",
       end: "2024",
-    },
-    {
-      school: "Netaji Subhas Memorial City College",
-      href: "https://www.nsmcity.ac.in/index.asp",
-      degree: "Higher Secondary",
-      logoUrl: "/waterloo.png",
-      start: "2019",
-      end: "2021",
     },
   ],
   projects: [
@@ -316,6 +266,23 @@ export const DATA = {
         "https://i.ibb.co/fM326Bv/logo.png",
       mlh: "https://nexuslink01v.netlify.app/",
       links: [],
+    },
+  ],
+  certificates: [
+    {
+      title: "Programming with JavaScript",
+      provider: "Coursera",
+      link: "https://coursera.org/certificate/xyz",
+    },
+    {
+      title: "React Basics",
+      provider: "Coursera",
+      link: "https://coursera.org/certificate/abc",
+    },
+    {
+      title: "Introduction to Front-End Developer",
+      provider: "Coursera",
+      link: "https://coursera.org/certificate/def",
     },
   ],
 } as const;
