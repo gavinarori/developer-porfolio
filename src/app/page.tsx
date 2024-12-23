@@ -6,9 +6,11 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import { Certificate } from "node:tls";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { GithubContributions } from "@/components/github-calendar";
+import { Timeline } from "@/components/ui/timeline";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -261,6 +263,42 @@ export default function Page() {
           ))}
         </div>
       </section>
+      {/**certifications should be here */}
+      <section id="certifications">
+  <div className="flex  flex-col gap-y-3">
+    <BlurFade delay={BLUR_FADE_DELAY * 7}>
+      <h2 className="text-xl font-bold">Certifications</h2>
+    </BlurFade>
+    <BlurFade delay={BLUR_FADE_DELAY * 8}>
+      <Timeline
+        data={DATA.certificates.map((cert:any) => ({
+          title: cert.title,
+          logoUrl: cert.logoUrl, 
+          content: (
+            <div>
+              <div>
+                <p className="text-neutral-800 dark:text-neutral-200 text-sm font-semibold">
+                  {cert.title}
+                </p>
+                <p className="text-neutral-600 dark:text-neutral-400 text-xs">
+                  {cert.provider}
+                </p>
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline text-xs"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+          ),
+        }))}
+      />
+    </BlurFade>
+  </div>
+</section>
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>

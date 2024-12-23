@@ -264,17 +264,34 @@ export const DATA = {
     {
       title: "Programming with JavaScript",
       provider: "Coursera",
-      link: "https://coursera.org/certificate/xyz",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcLXiAUFRc5hMtcUuLk_bdIYZO3q_shTanAA&s",
+      link: "https://coursera.org/share/24d832b3f40814d2c2fc90c5ed820515",
     },
     {
       title: "React Basics",
       provider: "Coursera",
-      link: "https://coursera.org/certificate/abc",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcLXiAUFRc5hMtcUuLk_bdIYZO3q_shTanAA&s",
+      link: "https://coursera.org/share/13bace62b1054e22d6f46828a215c2d9",
     },
     {
       title: "Introduction to Front-End Developer",
       provider: "Coursera",
-      link: "https://coursera.org/certificate/def",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcLXiAUFRc5hMtcUuLk_bdIYZO3q_shTanAA&s",
+      link: "https://coursera.org/verify/N57Q84SHVJDW",
+    },
+    ,
+    {
+      title: "learn javascript and jquery from scratch",
+      provider: "EDUONIX",
+      logoUrl: "https://cdn.eduonix.com/assets/images/logo_sprite.png",
+      link: "https://www.eduonix.com/certificate/7c683f09e7",
+    },
+    ,
+    {
+      title: "Introduction to CSS",
+      provider: "Simplilearn",
+      logoUrl: "https://www.simplilearn.com/ice9/new_logo.svgz",
+      link: "https://simpli.app.link/nX4zreh9xrb",
     },
   ],
 } as const;
