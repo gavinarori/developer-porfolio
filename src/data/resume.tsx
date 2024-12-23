@@ -11,7 +11,7 @@ export const DATA = {
     "I'm a developer from Kenya passionate about building innovative and user-friendly applications. I enjoy learning new technologies and collaborating on impactful projects.",
   summary:
     "I graduated with a Bachelor of Business Information Technology from Dedan Kimathi University of Technology in 2024. Currently, I'm focused on enhancing my skills in modern frameworks like Next.js and building practical projects.",
-  avatarUrl: "/Gavin.jpg",
+  avatarUrl: "https://avatars.githubusercontent.com/u/99688077?v=4",
   skills: [
     "JavaScript",
     "TypeScript",
@@ -36,7 +36,7 @@ export const DATA = {
   ],
   contact: {
     email: "arorigavin@gmail.com",
-    tel: "+91 6294925956",
+    tel: "+254 114898175",
     social: {
       GitHub: {
         name: "GitHub",
@@ -73,7 +73,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "mailto:prasenjitt4e@gmail.com",
+        url: "mailto:arorigavin@gmail.com",
         icon: Icons.email,
         navbar: false,
       },
@@ -83,11 +83,11 @@ export const DATA = {
   work: [
     {
       company: "Gigitise",
-      href: "",
+      href: "https://github.com/Gigitise",
       badges: [],
       location: "Remote",
       title: "Software Developer",
-      logoUrl: "/atomic.png",
+      logoUrl: "https://avatars.githubusercontent.com/u/139589381?s=200&v=4",
       start: "January 2024",
       end: "April 2024",
       description:[
@@ -101,22 +101,26 @@ export const DATA = {
     {
       company: "Adamur",
       badges: [],
-      href: "",
+      href: "https://www.adamur.io",
       location: "Remote",
       title: "Delegate Developer",
-      logoUrl: "/shopify.svg",
+      logoUrl: "https://avatars.githubusercontent.com/u/178998573?s=200&v=4",
       start: "September 2024",
       end: "Present",
-      description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+      description:[
+        "Built responsive and scalable front-end interfaces with React to enhance user experience.",
+        "Developed and deployed real-world projects using JavaScript, React, Prisma, Express, and PostgreSQL.",
+        "Integrated and managed databases efficiently with Prisma.",
+        "Implemented server-side logic and APIs using Express for seamless functionality."
+      ]
     },
   ],
   education: [
     {
       school: "Dedan Kimathi University of Technology",
-      href: "",
+      href: "https://www.dkut.ac.ke/",
       degree: "Bachelor in science ",
-      logoUrl: "/buildspace.jpg",
+      logoUrl: "https://www.dkut.ac.ke/images/logo.png",
       start: "2020",
       end: "2024",
     },
@@ -246,27 +250,15 @@ export const DATA = {
   ],
   hackathons: [
     {
-      title: "Smart India Hackathon",
-      dates: "March 23rd - 25th, 2022",
-      location: "Bhubaneswar, India",
-      description:
-        "Developed a learing portal with some free education content with the best paid contents too, the project was called as 'EducationX'.",
-      image:
-        "https://i.ibb.co/QDssrSq/smart-india-hackathon.jpg",
-      mlh: "https://github.com/Synchrotek/E-LearningX",
+       title: "Hello Tractor E-commerce Hackathon 🌾",
+    dates: "November 20th - 22nd, 2024",
+    location: "Virtual - Africa Focus",
+    description: 
+      "Participated in the Hello Tractor E-commerce Hackathon aimed at building a secondary marketplace platform for buying and selling second-hand tractors, agri-implements, and connecting with trained tractor operators. Implemented key features including user registration, tractor listings, advanced filters, messaging system, seller dashboard, and admin panel.",
+    image: "https://hellotractor.com/wp-content/uploads/2021/07/logo_medium.png",
+    mlh: "https://github.com/Hello-Tractor-Community/ht-marketplace-hackathon-gavin-arori",
       links: [],
-    },
-    {
-      title: "Smart India Hackathon",
-      dates: "December 19th - 23rd, 2023",
-      location: "Bhubaneswar, India",
-      description:
-        "Developed A collaborative coding web platform that enables Multiuser collboration on a coding project in real-time with features of group chat, to-do lists.",
-      image:
-        "https://i.ibb.co/fM326Bv/logo.png",
-      mlh: "https://nexuslink01v.netlify.app/",
-      links: [],
-    },
+    }
   ],
   certificates: [
     {
