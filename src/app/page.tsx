@@ -214,7 +214,7 @@ export default function Page() {
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my college years, I participated in some hackathons.
+                   I participated in some hackathons.
                 </p>
               </div>
             </div>
