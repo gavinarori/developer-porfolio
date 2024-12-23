@@ -41,34 +41,34 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/StarKnightt",
+        url: "https://github.com/gavinarori",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/prasenjitnayak/",
+        url: "https://www.linkedin.com/in/gavin-arori-5b767122b/",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://x.com/StarKnight_12",
+        url: "https://x.com/gavinogwanwa",
         icon: Icons.x,
 
         navbar: true,
       },
       Youtube: {
         name: "Youtube",
-        url: "https://youtube.com/@Star_Knight12",
+        url: "https://www.youtube.com/@ssitecraft",
         icon: Icons.youtube,
         navbar: true,
       },
       buyMeACoffee: {
         name: "buyMeACoffee",
-        url: "https://buymeacoffee.com/prasen",
+        url: "https://www.buymeacoffee.com/arorigavin",
         icon: Icons.buyMeACoffee,
         navbar: true,
       },
