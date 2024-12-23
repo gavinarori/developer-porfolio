@@ -128,125 +128,353 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Resume Builder",
-      href: "https://resume-builder-ten-opal.vercel.app/",
+      title: "Sitecraft Components",
+      href: "https://ssitecraft-components.vercel.app/",
       dates: "May 2023 - Sept 2023",
       active: true,
       description:
-        "It was my final year [Project](https://github.com/StarKnightt/ResumeBuilder) in our college, It is a interactive and versatile Dynamic CV Builder, completely build from scratch with backend functionallity .",
+        "It is a web application that contains pre-built  most trending components & elements and use them in your websites without having to worry about starting from scratch.",
       technologies: [
         "CSS",
         "javascript",
-        "MongoDB",
-        "Express.js",
+        "Markdown",
         "HTML",
-        "Regex",
+        "Next.js",
         "Node.js",
       ],
       links: [
         {
           type: "Website",
-          href: "https://resume-builder-ten-opal.vercel.app/",
+          href: "https://ssitecraft-components.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/StarKnightt/ResumeBuilder",
+          href: "https://github.com/gavinarori/ssitecraft-components",
           icon: <Icons.github className="size-3" />,
         },
       ],
       
       image: "",
       video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/6745e5e5080b60408ca08984/download.mp4",
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/676962a68f5e80dcc0b73f98/download.mp4",
     },
     {
-      title: "Coffee-Website",
-      href: "https://coffee-websitee.vercel.app/",
+      title: "Photography-Website",
+      href: "https://arori.framer.website/",
       dates: "September 2024 - October 2024",
       active: true,
       description:
-        "A web app, with the futurisitc yet nostalgic design of a coffee shop, with a menu and blend of retro vibes.",
+        "is a photographer website porfolio work projects. that captures authentic moments and tell stories through  images, blending creativity and emotion in each shot.",
       technologies: [
-        "React.js",
-        "Git",
-        "TailwindCSS",
-        "Framer-motion",
-        "React-icons",
-        "React-router-dom",
+        "Framer",
       ],
       links: [
         {
           type: "Website",
-          href: "https://coffee-websitee.vercel.app/",
+          href: "https://arori.framer.website/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/StarKnightt/Coffee-Website",
+          href: "",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/6745ea2d080b60408ca0bc08/download.mp4",
+      video: "https://video.gumlet.io/67690fd82fbe90b354d66613/67696e682fbe90b354d8ba26/download.mp4",
     },
     {
-      title: "GitHub Buddy Finder",
-      href: "https://buddy-find.vercel.app/",
+      title: "sitecraft",
+      href: "https://ssitecraft.vercel.app/",
       dates: "April 2023 - September 2023",
       active: true,
       description:
-        "This innovative web application helps developers connect with like-minded individuals based on their GitHub activity and language preferences.",
+        "This innovative web application helps Transforming businesses with cutting-edge web development.",
       technologies: [
-        "React.js",
+        "Prisma",
         "Octokit",
         "Rest API",
         "TailwindCSS",
-        "react-icons",
-        "react-router-dom",
-        "Vite",
+        "Framer-motion",
+        "Typescript",
+        "Nextjs",
       ],
       links: [
         {
           type: "Website",
-          href: "https://buddy-find.vercel.app/",
+          href: "https://ssitecraft.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/StarKnightt/Buddy-Finder",
+          href: "",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/6745ec82c84c6b7e105c3ee5/download.mp4",
+      video: "https://video.gumlet.io/67690fd82fbe90b354d66613/67696a3c2fbe90b354d88b3f/download.mp4",
     },
     {
-      title: "Solar System",
-      href: "https://solarrsystem.vercel.app/",
+      title: "E-commerce Admin Panel",
+      href: "https://shop-yangu.vercel.app/",
       dates: "September 2024 - October 2024",
       active: true,
       description:
-        "This project is a visually stunning and interactive web application that provides information about the solar system and it's planet with music.",
+        "This is an advanced e-commerce admin panel built with Next.js, featuring shop and product management, user authentication, and detailed analytics.",
       technologies: [
-        "React.js",
-        "font-awesome",
-        "react-icons",
-        "react-dom",
-        "CSS3",
-        "Vite",
+        "Next.js.",
+        "TailwindCSS",
+        "MongoDB",
+        "Prisma",
+        "Typescript",
+        "CSS",
         "Git",
       ],
       links: [
         {
           type: "Website",
-          href: "https://solarrsystem.vercel.app/",
+          href: "https://shop-yangu.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
       video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/6745ef75b79a267f99668bda/download.mp4",
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/67696e682fbe90b354d8ba2d/download.mp4",
+    },
+    {
+      title: "Distress App",
+      href: "https://distress-app.netlify.app/",
+      dates: "September 2024 - October 2024",
+      active: true,
+      description:
+        "The Distress App: Your Pocket Companion in Crisis. Instantly connect with emergency services, access vital resources, and receive immediate support during challenging situations. Empowering you with safety at your fingertips.",
+      technologies: [
+        "Next.js",
+        "Leaflet",
+        "react-icons",
+        "TailwindCSS",
+        "Typescript",
+        "MongoDB",
+        "Prisma",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://distress-app.netlify.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/gavinarori/use-distress-app",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/67696c172fbe90b354d8a1cc/download.mp4",
+    },
+    {
+      title: "Movie Hub",
+      href: "https://enchanting-pothos-b10347.netlify.app/",
+      dates: "September 2024 - October 2024",
+      active: true,
+      description:
+        "This is a movie web application with recently released movie and series their trailers and respective more details on their casts.",
+      technologies: [
+        "React.js",
+        "SCSS",
+        "tmdb API",
+        "react-dom",
+        "CSS3",
+        "Javascript",
+        "Git",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://enchanting-pothos-b10347.netlify.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/gavinarori/movie-app",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/6769a0c4a080a6ad160a1f5e/download.mp4",
+    },
+    {
+      title: "Gallery Web",
+      href: "https://gallery-web-five.vercel.app/",
+      dates: "September 2024 - October 2024",
+      active: true,
+      description:
+        "Introducing our web application, featuring a Theme Provider for a seamless user experience. Share your favorite photos simply by clicking on them. We're also making progress on the music feature. To upload your own pictures, just sign in and follow our user-friendly guide. Our application is built with a modern stack, complete with a robust search.",
+      technologies: [
+        "Next.js",
+        "Unsplash API",
+        "TailWindCSS",
+        "Axios",
+        "CSS3",
+        "Typescript",
+        "Git",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://gallery-web-five.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/67696c868f5e80dcc0b7a20c/download.mp4",
+    },
+    {
+      title: "Yodara",
+      href: "https://yodora-jade.vercel.app/",
+      dates: "September 2024 - October 2024",
+      active: true,
+      description:
+        "This project is a Yodora - Landing Page",
+      technologies: [
+        "React.js",
+        "TailwindCSS",
+        "Typescript",
+        "Figma",
+        "CSS3",
+        "Git",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://yodora-jade.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/67696dbd2fbe90b354d8b240/download.mp4",
+    },
+    {
+      title: "Food Catering",
+      href: "https://food-catering-kappa.vercel.app/",
+      dates: "September 2024 - October 2024",
+      active: true,
+      description:
+        "This project is a food catering service in your town. We are ready to serve your desire. The ultimate destination for all your healthy food delivery needs.",
+      technologies: [
+        "React.js",
+        "TailwindCSS",
+        "react-icons",
+        "Next.js",
+        "CSS3",
+        "Javascript",
+        "Git",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://food-catering-kappa.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/67696fe58f5e80dcc0b7c498/download.mp4",
+    },
+    {
+      title: "Shopping Cart Bag application",
+      href: "https://my-shopping-cart-bag-application.vercel.app/",
+      dates: "September 2024 - October 2024",
+      active: true,
+      description:
+        "This project is a visually stunning and interactive web application that enables customers to tract their products in the wishlist and the cart.",
+      technologies: [
+        "React.js",
+        "Redux",
+        "react-icons",
+        "react-dom",
+        "CSS3",
+        "javascript",
+        "Git",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://my-shopping-cart-bag-application.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/6769710f2fbe90b354d8cf61/download.mp4",
+    },
+    {
+      title: "modern website",
+      href: "https://porfolio-nine-pi.vercel.app/",
+      dates: "September 2024 - October 2024",
+      active: true,
+      description:
+        "This project is a visually stunning and interactive web application.",
+      technologies: [
+        "Next.js",
+        "acerternity",
+        "TailwindCSS",
+        "Radix",
+        "CSS3",
+        "Typescript",
+        "Git",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://porfolio-nine-pi.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/gavinarori/porfolio",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/67696aa18f5e80dcc0b78d4e/download.mp4",
+    },
+    {
+      title: "Tractor E-commerce",
+      href: "https://tractor-client.vercel.app/",
+      dates: "September 2024 - October 2024",
+      active: true,
+      description:
+        "This project is  a secondary marketplace e-commerce platform for buying and selling second-hand tractors, agri-implements, and connecting with certified tractor operators.",
+      technologies: [
+        "React.js",
+        "TailWindCSS",
+        "Redux",
+        "Node.JS",
+        "CSS3",
+        "MongoDB",
+        "Express.js",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://tractor-client.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },{
+          type: "Source",
+          href: "https://github.com/Hello-Tractor-Community/ht-marketplace-hackathon-gavin-arori",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "https://video.gumlet.io/67690fd82fbe90b354d66613/6769bfdf970d80cf652ce43a/download.mp4",
     },
   ],
   hackathons: [
