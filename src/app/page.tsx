@@ -130,7 +130,7 @@ export default function Page() {
                 Check out my latest blog posts:
               </p>
               <Link
-                href="https://www.prasen.dev/blog"
+                href="/blog"
                 className="text-blue-500 hover:underline inline-flex items-center"
               >
                 Visit My Blog
