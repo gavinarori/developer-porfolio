@@ -1,0 +1,329 @@
+---
+title: "Redux and Redux Toolkit(RTK)"
+publishedAt: "2025-01-02"
+summary: "The reality of Ubuntu Distro now"
+tags: ["JavaScript", "React", "WebAssembly", "AI", "Performance", "CodeBase"]
+---
+
+
+![Web-developement](/redux.avif)
+
+# INTRODUCTION 
+
+Redux is a predictable state container for javascript applications. It manages and stores application states in a more structured and maintainable way, its predictability property comes with merits like keeping track of your states in the state container. For this to be possible a pattern is enforced to ensure all the state transitions are explicit based on the action dispatched and can be tracked.
+
+In Redux, the state represents the entire state of your application. It is a single JavaScript object that holds the data your application needs. The state object is stored in the Redux store, which is responsible for managing the state and updating it when actions are dispatched. ln other words the state of an app is the state that is shared by all of the individual components of that app.
+
+The state in Redux is immutable, meaning that it cannot be modified directly. Instead, when an action is dispatched, a new state object is created based on the previous state and the action. This new state object replaces the previous state in the store. This approach makes it easier to track changes in the state and enables features like time-travel debugging.
+
+installation of redux to your project,run this command in your project directory
+
+```sh
+npm init
+npm i redux
+```
+```js
+const redux = require('redux');
+```
+
+This is used in a Node.js environment to import the Redux library. It uses the CommonJS module system to import the Redux library and assign it to a constant variable named `redux`. Once you have the Redux library imported, you can access its functions and methods to create and manage your application's state.
+
+## ACTIONS
+
+The only way your application can interact with the store in order to update the state of your application, you need to let redux know about that with an action, not allowed to directly update the state object. Generally, actions carry some information from your application to the store, these actions are plain javascript objects.
+
+Each action has a type property, which is a string that describes the action's purpose. Optionally, actions can also have a payload property, which contains any additional data needed to update the state.
+
+## Creating Actions in Redux
+
+To create actions in Redux, follow these steps:
+
+### Define Action Types
+
+Action types are constants that represent the different actions that can be dispatched to update the state. They are usually defined as string constants to avoid typos and make it easier to manage the actions.
+
+```javascript
+const FETCH_USER_REQUESTED = 'FETCH_USER_REQUESTED';
+const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS';
+const FETCH_USER_FAILED = 'FETCH_USER_FAILED';
+```
+
+### Create Action Creators
+
+Action creators are functions that return action objects. These objects have a `type` property, which corresponds to an action type, and an optional `payload` property, which contains any additional data needed to update the state.
+
+```javascript
+// fetchUserRequested: This action creator is called when the user fetching process starts.
+const fetchUserRequested = () => {
+    return {
+        type: FETCH_USER_REQUESTED
+    };
+};
+
+// fetchUserSuccess: This action creator is called when the user fetching process is successful.
+const fetchUserSuccess = (users) => {
+    return {
+        type: FETCH_USER_SUCCESS,
+        payload: users
+    };
+};
+
+// fetchUserFailed: This action creator is called when the user fetching process fails.
+const fetchUserFailed = (error) => {
+    return {
+        type: FETCH_USER_FAILED,
+        payload: error
+    };
+};
+```
+
+## Reducers
+
+Reducers specify how the application's state changes in response to actions sent to the store. 
+
+Reducers are **pure functions** that accept `state` and `action` as arguments and return the new state of the application.
+
+### Define the Initial State
+
+The initial state is an object that represents the default state of your application.
+
+```javascript
+const initialState = {
+    loading: false,
+    user: [],
+    error: ''
+};
+```
+
+### Define the Reducer Function
+
+The reducer function takes the initial state and an action as arguments and returns a new state based on the action type and payload.
+
+```javascript
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case FETCH_USER_REQUESTED:
+            return {
+                ...state,
+                loading: true
+            };
+        case FETCH_USER_SUCCESS:
+            return {
+                loading: false,
+                user: action.payload,
+                error: ''
+            };
+        case FETCH_USER_FAILED:
+            return {
+                loading: false,
+                user: [],
+                error: action.payload
+            };
+        default:
+            return state;
+    }
+};
+```
+
+## Store
+
+In Redux, the **store** holds your application's state. You can access your state via `getState()`, and update it by dispatching actions.
+
+The `subscribe` method allows you to listen for changes in the store. It takes a callback function as an argument, which will be called whenever the state changes. The `subscribe` method returns an `unsubscribe` function that can be called to stop listening for updates.
+
+```javascript
+unsubscribe(); // Stops listening for state updates.
+```
+
+## Thunk Action Creator
+
+The `fetchUsers` function is a thunk action creator that returns a function taking `dispatch` as an argument. Inside this function, you dispatch the `fetchUserRequested` action, make an API call using **Axios**, and then dispatch either `fetchUserSuccess` or `fetchUserFailed` based on the API result.
+
+```javascript
+const fetchUsers = () => {
+    return function(dispatch) {
+        dispatch(fetchUserRequested());
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then(response => {
+                const users = response.data.map(user => user.id);
+                dispatch(fetchUserSuccess(users));
+            })
+            .catch(error => {
+                dispatch(fetchUserFailed(error.message));
+            });
+    };
+};
+```
+
+## Create the Redux Store with Thunk Middleware
+
+To use Redux Thunk for handling asynchronous actions, apply the middleware when creating the store.
+
+```javascript
+const redux = require('redux');
+const thunkMiddleware = require('redux-thunk').default;
+const axios = require('axios');
+const applyMiddleware = redux.applyMiddleware;
+
+// Create the store
+const store = redux.createStore(reducer, applyMiddleware(thunkMiddleware));
+store.subscribe(() => { console.log(store.getState()); });
+store.dispatch(fetchUsers);
+```
+
+Here, you create the Redux store using `createStore`, passing in your reducer and applying `thunkMiddleware` using `applyMiddleware`. The subscription logs state changes to the console whenever the state updates. Finally, you dispatch the `fetchUsers` thunk action, which triggers the API call and updates the store's state accordingly.
+
+## Redux Toolkit(RTK)
+
+![Web-developement](/redux-2.avif)
+
+Redux Toolkit is an opinionated, batteries-included toolset for efficient Redux development. It is recommended to be the standard way to write Redux logic, and we strongly recommend that you use it.
+
+Redux toolkit is referred to as "opinionated" because it provides a set of recommended practices, convections, and utility functions that encourage a specific way of structuring and organizing redux code.
+
+Redux toolkit is also considered "batteries-included" because it comes with built-in utilities. These built-in features help developers with reduced amount of boiler-plate code they need to write and this helps them to get started quickly.
+
+installation of the redux toolkit to your project, run this command in your project directory
+
+```sh
+npm install @reduxjs/toolkit
+```
+### CREATESLICE
+
+Createslice is a function that generates a slice of the redux store, including the reducer, function action creators, and current state.
+
+therefore it helps to reduce boilerplate code and makes it easier to define a redux store.
+
+In redux, we write case reducer functions inside the reducer objects and give them readable names. However, with create slice in the toolkit will automatically generate action creators that correspond to each case reducer function we have and it automatically returns the existing state as the default state.
+
+Createslice allows us to safely "mutate "our state ,it utilises a library called immer inside. Immer uses a special javascript tool called proxy to swap data you provide and lets you write code that mutate although Immer tracks all the changes you've tried to make and then uses that list of changes to return a safely immutably updated value.
+
+```javascript
+import { createSlice } from "@reduxjs/toolkit";
+import  { SliderData }from '../../assests/data/chunkData'
+
+export const sliderSlice = createSlice({
+    name:'slider',
+    initialState:{
+        value: 0,
+        length:SliderData.length,
+    },
+    reducers:{
+        leftSlide(state,action){
+            state.value = action.payload < state.length -1 ? 0 : action.payload
+        },
+        rightSlide(state,action){
+            state.value = action.payload > state.length -1 ? 0 : action.payload
+        },
+        dotSlide(state,action){
+            const slide = action.payload
+            state.value = slide
+        }
+
+
+    }
+})
+
+export const {leftSlide,rightSlide,dotSlide} =sliderSlice.actions
+export default sliderSlice.reducer
+
+```
+Explanation:
+- The `createSlice` function is imported from the `@reduxjs/toolkit` package, which simplifies the process of creating Redux slices.
+- The `SliderData` is imported from the `../../assets/data/chunkData` file. It's assumed that the file contains data related to the slider component.
+- The `sliderSlice` is created using `createSlice` and provides a name for the slice and an initial state object.
+- The initial state object includes two properties:
+  - `value` initialized as `0`
+  - `length` initialized as the length of the `SliderData`
+- The `reducers` object defines the actions that can be dispatched to modify the state.
+- The `leftSlide` and `rightSlide` reducers update the `value` property based on the `action.payload` value:
+  - If the payload is less than the length minus 1, it sets `value` to `0`
+  - Otherwise, it sets it to the payload value
+- The `dotSlide` reducer sets the `value` property to the value provided in the `action.payload`.
+- The `export` statement exports the action creators `leftSlide`, `rightSlide`, and `dotSlide` from the slice.
+- The default export is the reducer function for the slider slice.
+
+This code defines a Redux slice for managing the state of a slider component. It provides actions for moving the slider left, right, or directly to a specific dot, and the reducer updates the state accordingly.
+
+### CONFIGURE STORE
+
+configureStore is a utility function provided by Redux Toolkit that simplifies the process of setting up a Redux store. It automatically applies a set of recommended middleware, configures the Redux DevTools extension, and combines the provided reducers.
+
+That one call to configure the store does all the work for us like instead of combined when we have more than one reducer.
+
+- it created a redux store using that root reducer.A root reducer is a top-level reducer in a Redux application that combines all the individual reducers responsible for managing different parts of the application state. The root reducer is created using the combineReducers function provided by Redux or Redux Toolkit
+- it automatically added thunk middleware and so adds more middleware to check for common mistake like accidentally mutating the state .Middleware provides a third-party extension point between dispatching the action , and the moment it reaches the reducer in other words it is a suggested way to extend redux with custom functionality.
+
+
+```javascript
+import { configureStore } from '@reduxjs/toolkit';
+import slideReducer from '../features/slices/sliderSlice';
+import itemReducer from '../features/slices/itemSlice'
+import cartReducer from '../features/slices/cartSlice'
+
+
+export const store = configureStore({
+  reducer: {
+    slider: slideReducer,
+    item: itemReducer,
+    cart:cartReducer
+  },
+});
+```
+Explanation:
+
+- The `configureStore` function is imported from `@reduxjs/toolkit`. It is used to create the Redux store.
+- The `slideReducer`, `itemReducer`, and `cartReducer` are imported from different slice files.
+  - It is assumed that these files contain the reducer functions for the corresponding slices (`slider`, `item`, `cart`).
+- The `store` constant is created by calling `configureStore` with a configuration object.
+- The configuration object has a `reducer` property that takes an object with key-value pairs.
+- Each key in the `reducer` object represents a slice name (`slider`, `item`, `cart`), and the corresponding value is the reducer function for that slice.
+- The `configureStore` function combines the reducers from different slices into a single store.
+- The created store is assigned to the `store` constant, which can be used to interact with the Redux store in the application.
+
+In summary, this code configures the Redux store by combining multiple reducers from different slices into a single store using Redux Toolkit's `configureStore` function.
+
+### createAsyncThunk
+
+createAsyncThunk is a utility function provided by Redux Toolkit that simplifies the process of handling asynchronous actions in Redux. It generates a set of action creators and action types for a given async operation, and automatically dispatches the appropriate actions based on the operation's state.
+
+
+```javascript
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+export const fetchUsers = createAsyncThunk(
+  'users/fetch',
+  async (_, { dispatch, rejectWithValue }) => {
+    try {
+      dispatch(fetchUserRequested());
+      const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+      const users = response.data.map((user) => user.id);
+      return users;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+```
+Explanation:
+
+- `createAsyncThunk` is imported from `@reduxjs/toolkit` to create an async thunk action.
+- The `fetchUsers` thunk action is created using `createAsyncThunk`.
+  - It takes two arguments: a string representing the action type and an async function that performs the asynchronous logic.
+- Inside the async function:
+  - The first argument `_` is used to indicate that it is not being used in this case.
+  - You can replace `_` with any necessary arguments for your specific use case.
+- Within the async function, the `dispatch` and `rejectWithValue` functions are provided as the second argument to:
+  - Enable dispatching actions.
+  - Handle errors.
+- The `fetchUserRequested` action is dispatched using `dispatch(fetchUserRequested())` to indicate that the user fetching process has started.
+- The `axios.get` method is used to make an HTTP `GET` request to the specified URL.
+- The response data is mapped to extract the user IDs.
+- The `fetchUserSuccess` action is dispatched using `dispatch(fetchUserSuccess(users))` to store the retrieved user IDs in the state.
+- If an error occurs during the HTTP request or mapping process:
+  - The `fetchUserFailed` action is dispatched using `dispatch(fetchUserFailed(error.message))` to handle the failure.
+  - The `error.message` is passed to `rejectWithValue` to include the error message in the rejected action payload.
+
+By regenerating the `fetchUsers` function using `createAsyncThunk`, you can handle the asynchronous fetching of users and handle success and failure scenarios in a more streamlined and standardized way using Redux Toolkit.
